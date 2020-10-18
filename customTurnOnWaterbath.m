@@ -13,6 +13,7 @@ d8 = dec2hex(input("8/8 Serial Comm Enable?: 0=OFF, 1=ON, 2=NO CHANGE\n"),2);
 customHex = "CA 00 01 81 08 ";
 hexString = append(customHex,d1,' ',d2,' ',d3,' ',d4,' ',d5,' ',d6,' ',d7,' ',d8);%Prepare to get cs
 hexString = addCheckSum(hexString);
+
 fprintf(hexString+'\n');
 confirm = input("OK? Y/n\n",'s');%Confirm produced Hex bytes
 if isempty(confirm)

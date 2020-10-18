@@ -6,9 +6,10 @@ function csattach = addCheckSum(hexstring)
 % 0xSUM XOR 0xFF and concate 0x and returns the whole char
 
 cleanstring = strip(hexstring,'C');%Clean hex string to only checksum region
-cleanstring = strip(hexstring,'C');
+cleanstring = strip(cleanstring,'C');
 cleanstring = strip(cleanstring,'A');
 cleanstring = split(strip(cleanstring));%split into array for hex summation
+
 i = 1;
 sum = 0;
 while i <= size(cleanstring,1)%Sum all the checksum region in hex
